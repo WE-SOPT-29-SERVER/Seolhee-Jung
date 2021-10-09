@@ -1,10 +1,22 @@
 // 1-st assginment level3
 // 서버파트 members.js 데이터를 이용해서 랜덤으로 조를 짜는 알고리즘 만들어보기
 
-const members = require("./members")["members"];
+const members = require("./members");
 
-const YB = members.filter(member => member.group === "YB");
+// let YB = [];
+// let OB = [];
+
+// members.forEach(member => {
+//     if (member.group === 'YB') {
+//         YB.push(member.name);
+//     } else {
+//         OB.push(member.name);
+//     }
+// });
+
+const YB =members.filter(member => member.group === "YB");
 const OB = members.filter(member => member.group === "OB");
+
 
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
 shuffle(YB);
