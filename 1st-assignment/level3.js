@@ -3,16 +3,8 @@
 
 const members = require("./members")["members"];
 
-let YB = [];
-let OB = [];
-
-members.forEach(member => {
-    if (member.group === 'YB') {
-        YB.push(member.name);
-    } else {
-        OB.push(member.name);
-    }
-});
+const YB = members.filter(member => member.group === "YB");
+const OB = members.filter(member => member.group === "OB");
 
 function shuffle(array) { array.sort(() => Math.random() - 0.5); }
 shuffle(YB);
