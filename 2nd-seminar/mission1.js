@@ -44,7 +44,7 @@ getOnline(members).then((onlineMembers) => getOB(onlineMembers)).then(console.lo
 // YB이면서 오프라인인 멤버
 getYB(members).then(getOffline).then(console.log);
 
-const asyncFunc = async(members) => {
+const asyncFunc = async members => {
     const onlineMembrs = await getOnline(members);
     const onlineOBMembers = await getOB(onlineMembrs);
     console.log(onlineOBMembers);
