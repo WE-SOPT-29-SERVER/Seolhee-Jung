@@ -14,4 +14,13 @@ function divide(a,b) {
     return a/b;
 }
 
-module.exports = {add, subtract, multiply, divide}
+const calculator = {
+    add,
+    subtract,
+    multiply,
+    divide
+};
+
+module.exports = calculator;
+
+// module.exports = {add, subtract, multiply, divide}
